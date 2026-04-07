@@ -1,0 +1,46 @@
+# Obsidian workspace state (per-machine, not portable)
+.obsidian/workspace*.json
+.obsidian/workspaces.json
+.obsidian/cache
+.obsidian/graph.json
+.obsidian/.trash/
+
+# bkit / OMC agent state (별개 시스템, vault 콘텐츠 아님)
+.bkit/
+.omc/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor backups
+*.swp
+*~
+.#*
+
+# Local secrets (혹시 모를 PII 격리 폴더)
+wiki/_broken/*.md
+!wiki/_broken/.gitkeep
+
+# Personal content — 시스템 템플릿/스키마만 git에 올림. 콘텐츠는 로컬 전용.
+# raw/ 모든 마크다운 (개인 자료) — .gitkeep과 _attachments 디렉토리는 유지
+raw/*.md
+raw/_attachments/*
+!raw/_attachments/.gitkeep
+
+# wiki/ 콘텐츠 (raw에서 derive 되거나 사용자 query 결과)
+wiki/concepts/*.md
+wiki/entities/*.md
+wiki/topics/**/*.md
+wiki/summaries/*.md
+wiki/queries/*.md
+wiki/digests/*.md
+wiki/_scratch/*.md
+
+# 단, 시스템 진리원 파일은 명시적으로 포함:
+# - wiki/master-index.md (카탈로그, 비어있음)
+# - wiki/log.md (활동 로그, INIT만)
+# - wiki/open-questions.md (템플릿)
+# - wiki/_meta/golden.md, stats.md, glossary.md (eval/통계/용어 템플릿)
+# 위 파일들은 default ignore에 안 걸리므로 명시 white-list 불필요
