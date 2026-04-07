@@ -19,6 +19,9 @@
 *~
 .#*
 
+# Obsidian Bases (개인 뷰 정의)
+*.base
+
 # Local secrets (혹시 모를 PII 격리 폴더)
 wiki/_broken/*.md
 !wiki/_broken/.gitkeep
@@ -38,9 +41,14 @@ wiki/queries/*.md
 wiki/digests/*.md
 wiki/_scratch/*.md
 
-# 단, 시스템 진리원 파일은 명시적으로 포함:
-# - wiki/master-index.md (카탈로그, 비어있음)
-# - wiki/log.md (활동 로그, INIT만)
-# - wiki/open-questions.md (템플릿)
-# - wiki/_meta/golden.md, stats.md, glossary.md (eval/통계/용어 템플릿)
-# 위 파일들은 default ignore에 안 걸리므로 명시 white-list 불필요
+# 개인 볼트의 실제 카탈로그·로그·용어집도 제외.
+# (git에는 templates/ 아래의 빈 버전만 올리고, ./scripts/init.sh 로 wiki/ 에 복사)
+wiki/master-index.md
+wiki/log.md
+wiki/_meta/glossary.md
+
+# 명시적으로 tracked되는 시스템 파일:
+# - templates/{master-index,log,glossary}.md — 빈 부트스트랩 템플릿
+# - wiki/open-questions.md — 템플릿 그대로 (개인 콘텐츠 없음)
+# - wiki/_meta/{golden,stats}.md — eval 시나리오 / Dataview 쿼리 템플릿
+# - scripts/init.sh — 첫 설치 부트스트랩
