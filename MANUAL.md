@@ -255,6 +255,11 @@ broken pages:   0
 4. master-index "Recent Changes" 갱신
 5. log.md append: `[ts] DIGEST 2026-W14 → 12 pages summarized`
 
+**커맨드**:
+```
+주간 시놉시스
+```
+
 **언제**: 매주 월요일 또는 금요일. "이번 주 뭐 배웠지?" 자동 답변. 시간 지나면 digests/가 학습 일지가 됨.
 
 ---
@@ -263,15 +268,15 @@ broken pages:   0
 
 ingest 끝나면 그냥 자연어로:
 
-```
 > Karpathy가 LLM Wiki를 만든 이유는?
+
 > compile-once 원칙이 뭐야?
+
 > RAG와 LLM Wiki의 차이?
-```
 
 또는 명시적:
 ```
-> /llm-wiki query "..."
+/llm-wiki query "..."
 ```
 
 **Claude 동작**:
