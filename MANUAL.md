@@ -163,12 +163,12 @@ raw → wiki 컴파일.
 1. `raw/*.md` 중 `wiki/summaries/<slug>.md` 없는 것 식별 (= 미-ingest)
 2. 각 파일에 대해:
    - sha256 hash 계산 → `source_hash`
-   - **wiki/summaries/<slug>.md** 생성 (한국어 5문단 + frontmatter)
-   - 핵심 개념 → **wiki/concepts/<concept>.md** 신규/갱신 (`first_seen`/`last_updated_by` 추적)
-   - 인물·도구 → **wiki/entities/<name>.md**
-   - 적절한 토픽 → **wiki/topics/<t>/index.md** + MOC mermaid
-   - 영어 용어 → **wiki/_meta/glossary.md** (한국어)+(English) 병기
-   - 양방향 [[wikilink]] 최소 3개
+   - `wiki/summaries/<slug>.md` 생성 (한국어 5문단 + frontmatter)
+   - 핵심 개념 → `wiki/concepts/<concept>.md` 신규/갱신 (`first_seen`/`last_updated_by` 추적)
+   - 인물·도구 → `wiki/entities/<name>.md`
+   - 적절한 토픽 → `wiki/topics/<t>/index.md` + MOC mermaid
+   - 영어 용어 → `wiki/_meta/glossary.md` (한국어)+(English) 병기
+   - 양방향 `[[wikilink]]` 최소 3개
 3. **wiki/master-index.md** 갱신
 4. **wiki/log.md** append: `[ts] INGEST raw/foo.md → 12 wiki pages`
 5. 파싱 실패 → wiki/_broken/로 격리
